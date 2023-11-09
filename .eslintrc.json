@@ -1,0 +1,21 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "standard-with-typescript",
+        "plugin:react/recommended"
+    ],
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+      "@typescript-eslint/no-namespace": "off",
+      "@typescript-eslint/consistent-type-definitions":"off",
+      "@typescript-eslint/consistent-type-imports": "off"
+    }
+}

@@ -1,5 +1,5 @@
 export interface GetBankAccount {
-  perform: () => GetBankAccount.Response
+  perform: () => Promise<GetBankAccount.Response>
 }
 
 export namespace GetBankAccount {

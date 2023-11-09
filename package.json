@@ -39,6 +39,7 @@
     ]
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.2.0",
     "@types/jest": "^29.5.8",
     "@types/module-alias": "^2.0.4",
     "@types/node": "^20.9.0",

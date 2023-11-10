@@ -10,13 +10,15 @@
     "parserOptions": {
 
     },
-    "files": ["jest.config.js"],
     "plugins": [
         "react"
     ],
     "rules": {
       "@typescript-eslint/no-namespace": "off",
       "@typescript-eslint/consistent-type-definitions":"off",
-      "@typescript-eslint/consistent-type-imports": "off"
+      "@typescript-eslint/consistent-type-imports": "off",
+      "@typescript-eslint/semi": "off",
+      "@typescript-eslint/no-floating-promises": "off",
+      "@typescript-eslint/strict-boolean-expressions": "off"
     }
 }

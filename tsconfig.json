@@ -31,5 +31,5 @@
     "strictPropertyInitialization": true,
     "noImplicitAny": true
   },
-  "include": ["src", "tests", "jest.config.js"]
+  "include": ["src", "tests", "jest.config.js", "jest-setup.ts"]
 }

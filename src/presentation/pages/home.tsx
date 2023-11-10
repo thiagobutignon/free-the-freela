@@ -1,16 +1,16 @@
-import './App.css'
+import './home.css'
 
-import { AccountList, ChartBox } from './presentation/components'
+import { AccountList, ChartBox } from '../components'
 import React, { useEffect, useState } from 'react'
 
 import { ApexOptions } from 'apexcharts'
-import { GetBankAccount } from './domain/models'
+import { GetBankAccount } from '../../domain/models'
 
 type Props = {
   getBankAccount: GetBankAccount
 }
 
-export const App: React.FC<Props> = ({ getBankAccount }) => {
+export const Home: React.FC<Props> = ({ getBankAccount }) => {
   const [state, setState] = useState({
     accounts: [] as GetBankAccount.Response,
     isLoading: false,
@@ -44,7 +44,7 @@ export const App: React.FC<Props> = ({ getBankAccount }) => {
         acc[transaction.date] = (acc[transaction.date] || 0) + transaction.amount;
         return acc;
       }, {});
-      const descriptions = selectedAccount.transactions.map(t => t.description);
+      const descriptions = selectedAccount.transactions.map(transaction => transaction.description);
       setTransactionDescriptions(descriptions);
       setBarChartData(Object.entries(transactionData).map(([date, amount]) => ({ x: date, y: amount })));
       setShowBarChart(true);
@@ -91,6 +91,7 @@ export const App: React.FC<Props> = ({ getBankAccount }) => {
 
   const chartLabels = makeAccountTypes()
   const chartSeries = aggregateBalances()
+
   return (
     <>
     <div className="chart-container">

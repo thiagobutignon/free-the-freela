@@ -1,24 +1,20 @@
 import './index.css'
 
-import { App } from './App'
 import { ChakraProvider } from '@chakra-ui/react'
-import { MockGetBankAccount } from './data/usecases'
+import { Home } from './presentation/pages/home'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { makeGetBankAccount } from './main/factories'
 import reportWebVitals from './reportWebVitals'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 )
 
-const makeGetBankAccount = (): MockGetBankAccount => {
-  return new MockGetBankAccount()
-}
-
 root.render(
   <React.StrictMode>
     <ChakraProvider>
-      <App getBankAccount={makeGetBankAccount()} />
+      <Home getBankAccount={makeGetBankAccount()} />
     </ChakraProvider>
   </React.StrictMode>
 )

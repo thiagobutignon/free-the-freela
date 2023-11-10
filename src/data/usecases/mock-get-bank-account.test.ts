@@ -1,6 +1,6 @@
+import { MockGetBankAccount } from './mock-get-bank-account';
 import { faker } from '@faker-js/faker';
 import { mockBankAccounts } from '../../domain/mocks';
-import { MockGetBankAccount } from './mock-get-bank-account';
 
 jest.mock('timers');
 
@@ -36,7 +36,7 @@ describe('MockGetBankAccount', () => {
     const promise = mockGetBankAccount.perform();
     jest.runAllTimers();
 
-    await expect(promise).rejects.toThrow('An error occurred while retrieving bank accounts'); // Await the promise
+    await expect(promise).rejects.toThrow('An error occurred while retrieving bank accounts')
     expect(setTimeoutSpy).toHaveBeenCalled();
   });
 });

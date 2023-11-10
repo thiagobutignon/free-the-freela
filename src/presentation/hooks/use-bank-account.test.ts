@@ -37,4 +37,13 @@ describe('useBankAccount', () => {
 
     expect(getBankAccountSpy.callsCount).toBe(1);
   });
+
+  it('sets isLoading to true while fetching data', async () => {
+    const { result } = renderHook(() => useBankAccount(getBankAccountSpy));
+
+    expect(result.current.state.isLoading).toBe(true);
+    await waitFor(() => {
+      expect(result.current.state.isLoading).toBe(false);
+    });
+  });
 });

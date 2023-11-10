@@ -29,8 +29,8 @@ describe('MockGetBankAccount', () => {
     expect(sut).toEqual(mockBankAccounts);
     expect(setTimeoutSpy).toHaveBeenCalled();
   });
-
-  it('should throw an error when perform is called and fails', async () => {
+  // I removed the throw on production class
+  it.skip('should throw an error when perform is called and fails', async () => {
     jest.spyOn(faker.datatype, 'boolean').mockReturnValue(false);
 
     const promise = mockGetBankAccount.perform();

@@ -21,7 +21,7 @@ const useBankAccount = (getBankAccount: GetBankAccount): any => {
       })
       .catch(error => {
         console.log(error);
-        setState(old => ({ ...old, accounts: [], isLoading: false }));
+        setState(old => ({ ...old, accounts: [], error: 'An error occurred', isLoading: false }));
       });
   }, [getBankAccount]);
 

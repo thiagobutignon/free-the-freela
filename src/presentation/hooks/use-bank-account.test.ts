@@ -46,4 +46,15 @@ describe('useBankAccount', () => {
       expect(result.current.state.isLoading).toBe(false);
     });
   });
+
+  it('updates state correctly on error', async () => {
+    const error = new Error('An error occurred');
+    getBankAccountSpy.perform = async () => await Promise.reject(error);
+    const { result } = renderHook(() => useBankAccount(getBankAccountSpy));
+
+    await waitFor(() => {
+      expect(result.current.state.error).toBe(error.message);
+      expect(result.current.state.accounts).toEqual([]);
+    });
+  });
 });

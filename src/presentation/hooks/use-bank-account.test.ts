@@ -57,4 +57,12 @@ describe('useBankAccount', () => {
       expect(result.current.state.accounts).toEqual([]);
     });
   });
+
+  it('makes account types correctly', async () => {
+    const { result } = renderHook(() => useBankAccount(getBankAccountSpy));
+    await waitFor(() => { expect(result.current.state.isLoading).toBe(false); });
+
+    const accountTypes = result.current.makeAccountTypes();
+    expect(accountTypes).toEqual(mockBankAccounts.map(account => account.accountType));
+  });
 });

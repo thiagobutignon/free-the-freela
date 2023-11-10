@@ -23,6 +23,8 @@ export const Home: React.FC<Props> = ({ getBankAccount }) => {
     transactionDescriptions
   } = useBankAccount(getBankAccount);
 
+  const chartSeries = aggregateBalances()
+
   const pieOptions: ApexOptions = {
     chart: {
       events: {
@@ -67,8 +69,6 @@ export const Home: React.FC<Props> = ({ getBankAccount }) => {
       }
     }
   }
-
-  const chartSeries = aggregateBalances()
 
   return (
     <>

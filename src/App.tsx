@@ -1,12 +1,10 @@
 import './App.css'
 
+import { AccountList, ChartBox } from './presentation/components'
 import React, { useEffect, useState } from 'react'
 
-import { AccountList } from './presentation/components'
 import { ApexOptions } from 'apexcharts'
-import { Box } from '@chakra-ui/react'
 import { GetBankAccount } from './domain/models'
-import ReactApexChart from 'react-apexcharts'
 
 type Props = {
   getBankAccount: GetBankAccount
@@ -96,21 +94,17 @@ export const App: React.FC<Props> = ({ getBankAccount }) => {
   return (
     <>
     <div className="chart-container">
-      <Box width={['100%', '50%']} minWidth={'390px'} mt={'16px'} >
-        <ReactApexChart
-          options={pieOptions}
-          series={chartSeries}
-          type={pieOptions.chart?.type}
-        />
-      </Box>
+      <ChartBox
+        options={pieOptions}
+        series={chartSeries}
+        type={'pie'}
+      />
       {showBarChart && (
-        <Box width={['100%', '50%']} minWidth={'390px'} mt={'16px'}>
-          <ReactApexChart
-            options={barOptions}
-            series={[{ data: barChartData }]}
-            type={barOptions.chart?.type}
-          />
-         </Box>
+        <ChartBox
+          options={barOptions}
+          series={[{ data: barChartData }]}
+          type={'bar'}
+        />
       )}
     </div>
     <AccountList accounts={state.accounts}/>

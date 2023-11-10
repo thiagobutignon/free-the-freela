@@ -1,3 +1,24 @@
+# About this Application
+Accessible at https://free-the-freela.vercel.app/, employs Clean Architecture, facilitating the addition of new features without affecting existing functionalities. Here's an improved description of your architecture:
+
+## Architecture
+I used Clean Architecture in this project, because it's a easy way to add new features without impact the features that have been created.
+
+### Domain layer
+This layer houses all models and interfaces, independent of frameworks, libraries, or external packages. It's isolated from the React application, ensuring a clear separation of concerns.
+
+### Data layer
+This layer handles the parsing of API responses, managing both errors and successful outcomes. It solely consists of TypeScript code, without the need for additional libraries.
+
+### Infra Layer
+The Infrastructure Layer is designated for external dependencies like Axios and GraphQL. It's where all the interactions with external services and APIs are managed.
+
+### Presentation Layer
+The React application resides within the Presentation Layer. This design choice allows for flexibility in the choice of frontend frameworks. If a transition from React to Angular, Vue, or another framework is desired, only the Presentation Layer needs reworking, leaving the rest of the application intact.
+
+### Main Layer
+Instead of using Create React App, a custom configuration for tools like Jest, ESLint, and TypeScript is recommended. This approach allows for stronger coding patterns and the utilization of advanced TypeScript features, such as module aliases. These enhancements contribute to a more robust and efficient software architecture.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -28,19 +49,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

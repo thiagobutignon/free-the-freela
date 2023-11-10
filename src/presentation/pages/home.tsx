@@ -1,6 +1,7 @@
 import './home.css'
 
 import { AccountList, ChartBox } from '../components'
+import { Box, Text } from '@chakra-ui/react'
 
 import { ApexOptions } from 'apexcharts'
 import { GetBankAccount } from '../../domain/models'
@@ -72,18 +73,28 @@ export const Home: React.FC<Props> = ({ getBankAccount }) => {
 
   return (
     <>
+
     <div className="chart-container" style={{ padding: '16px' }}>
+    <Box>
+      <Text fontSize={'20px'} fontWeight={700}>Your bank accounts distribution by type</Text>
       <ChartBox
-        options={pieOptions}
-        series={chartSeries}
-        type={'pie'}
-      />
-      {showBarChart && (
-        <ChartBox
-          options={barOptions}
-          series={[{ data: barChartData }]}
-          type={'bar'}
+          options={pieOptions}
+          series={chartSeries}
+          type={'pie'}
         />
+    </Box>
+
+      {showBarChart && (
+        <>
+        <Box>
+          <Text fontSize={'20px'} fontWeight={700}>Transactions</Text>
+          <ChartBox
+            options={barOptions}
+            series={[{ data: barChartData }]}
+            type={'bar'}
+          />
+        </Box>
+        </>
       )}
     </div>
     <AccountList accounts={state.accounts}/>

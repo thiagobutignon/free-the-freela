@@ -65,4 +65,17 @@ describe('useBankAccount', () => {
     const accountTypes = result.current.makeAccountTypes();
     expect(accountTypes).toEqual(mockBankAccounts.map(account => account.accountType));
   });
+
+  it('reacts to changes in getBankAccount dependency', async () => {
+    const newGetBankAccountSpy = new GetBankAccountSpy(/* new mock data */);
+    const { result, rerender } = renderHook(({ getBankAccount }) => useBankAccount(getBankAccount), {
+      initialProps: { getBankAccount: getBankAccountSpy }
+    });
+
+    rerender({ getBankAccount: newGetBankAccountSpy });
+
+    await waitFor(() => {
+      expect(result.current.state.accounts).not.toEqual(mockBankAccounts);
+    });
+  });
 });

@@ -49,6 +49,10 @@ export const Home: React.FC<Props> = ({ getBankAccount }) => {
     return Object.values(balanceMap);
   };
 
+  const aggregateDates = (): string[] | undefined => {
+    return selectedAccountIndex != null ? state.accounts[selectedAccountIndex].transactions?.map(transaction => transaction.date) : []
+  }
+
   const pieOptions: ApexOptions = {
     chart: {
       events: {
@@ -61,10 +65,28 @@ export const Home: React.FC<Props> = ({ getBankAccount }) => {
 
   const barOptions: ApexOptions = {
     chart: {
-      type: 'bar'
+      type: 'bar',
+      zoom: {
+        enabled: true,
+        type: 'x',
+        autoScaleYaxis: false,
+        zoomedArea: {
+          fill: {
+            color: '#90CAF9',
+            opacity: 0.4
+          },
+          stroke: {
+            color: '#0D47A1',
+            opacity: 0.4,
+            width: 1
+          }
+        }
+      }
     },
+
     xaxis: {
-      categories: selectedAccountIndex != null ? state.accounts[selectedAccountIndex].transactions?.map(transaction => transaction.date) : []
+      categories: aggregateDates(),
+      tickPlacement: 'on'
     },
     tooltip: {
       enabled: true,
@@ -93,7 +115,7 @@ export const Home: React.FC<Props> = ({ getBankAccount }) => {
 
   return (
     <>
-    <div className="chart-container">
+    <div className="chart-container" style={{ padding: '16px' }}>
       <ChartBox
         options={pieOptions}
         series={chartSeries}

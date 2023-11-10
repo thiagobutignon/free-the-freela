@@ -1,7 +1,7 @@
 module.exports = {
   collectCoverageFrom: [
     '<rootDir>/src/**/*.{js,jsx,ts,tsx}',
-    '!<rootDir>/src/main/**',
+    '!<rootDir>/src/main/**/*.ts',
     '!<rootDir>/src/data/protocols/**',
     '!<rootDir>/src/domain/models/**',
     '!<rootDir>/src/reportWebVitals.js',

@@ -1,25 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1699645296974" clover="3.2.0">
-  <project timestamp="1699645296974" name="All files">
-    <metrics statements="88" coveredstatements="26" conditionals="26" coveredconditionals="11" methods="36" coveredmethods="12" elements="150" coveredelements="49" complexity="0" loc="88" ncloc="88" packages="11" files="23" classes="23"/>
+<coverage generated="1699651122249" clover="3.2.0">
+  <project timestamp="1699651122249" name="All files">
+    <metrics statements="81" coveredstatements="44" conditionals="22" coveredconditionals="11" methods="34" coveredmethods="21" elements="137" coveredelements="76" complexity="0" loc="81" ncloc="81" packages="9" files="16" classes="16"/>
     <package name="src">
-      <metrics statements="11" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="index.tsx" path="/home/thiagobutignon/dev/free-the-freela/src/index.tsx">
         <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="10" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
-      </file>
-      <file name="reportWebVitals.ts" path="/home/thiagobutignon/dev/free-the-freela/src/reportWebVitals.ts">
-        <metrics statements="8" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="cond" truecount="0" falsecount="4"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.data.mocks">
@@ -36,15 +25,6 @@
         <line num="24" count="0" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.data.protocols">
-      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="http-client.ts" path="/home/thiagobutignon/dev/free-the-freela/src/data/protocols/http-client.ts">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      </file>
-      <file name="index.ts" path="/home/thiagobutignon/dev/free-the-freela/src/data/protocols/index.ts">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
     </package>
     <package name="src.data.usecases">
@@ -65,27 +45,18 @@
       <metrics statements="10" coveredstatements="10" conditionals="10" coveredconditionals="10" methods="4" coveredmethods="4"/>
       <file name="bank-account-mock.ts" path="/home/thiagobutignon/dev/free-the-freela/src/domain/mocks/bank-account-mock.ts">
         <metrics statements="10" coveredstatements="10" conditionals="10" coveredconditionals="10" methods="4" coveredmethods="4"/>
-        <line num="8" count="4" type="stmt"/>
-        <line num="20" count="4" type="stmt"/>
-        <line num="21" count="4" type="stmt"/>
-        <line num="26" count="4" type="cond" truecount="2" falsecount="0"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
-        <line num="32" count="4" type="stmt"/>
-        <line num="36" count="25" type="stmt"/>
-        <line num="45" count="1" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="20" count="8" type="stmt"/>
+        <line num="21" count="8" type="stmt"/>
+        <line num="26" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="32" count="8" type="stmt"/>
+        <line num="36" count="46" type="stmt"/>
+        <line num="45" count="2" type="stmt"/>
       </file>
       <file name="index.ts" path="/home/thiagobutignon/dev/free-the-freela/src/domain/mocks/index.ts">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      </file>
-    </package>
-    <package name="src.domain.models">
-      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="bank-account.ts" path="/home/thiagobutignon/dev/free-the-freela/src/domain/models/bank-account.ts">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      </file>
-      <file name="index.ts" path="/home/thiagobutignon/dev/free-the-freela/src/domain/models/index.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
     </package>
@@ -116,17 +87,6 @@
         <line num="12" count="2" type="stmt"/>
       </file>
     </package>
-    <package name="src.main.factories">
-      <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.ts" path="/home/thiagobutignon/dev/free-the-freela/src/main/factories/index.ts">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      </file>
-      <file name="make-get-bank-account.ts" path="/home/thiagobutignon/dev/free-the-freela/src/main/factories/make-get-bank-account.ts">
-        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-      </file>
-    </package>
     <package name="src.presentation.components">
       <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
       <file name="account-list.tsx" path="/home/thiagobutignon/dev/free-the-freela/src/presentation/components/account-list.tsx">
@@ -144,52 +104,58 @@
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
     </package>
-    <package name="src.presentation.pages">
-      <metrics statements="39" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="19" coveredmethods="0"/>
-      <file name="home.tsx" path="/home/thiagobutignon/dev/free-the-freela/src/presentation/pages/home.tsx">
-        <metrics statements="39" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="19" coveredmethods="0"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="29" count="0" type="cond" truecount="0" falsecount="2"/>
+    <package name="src.presentation.hooks">
+      <metrics statements="35" coveredstatements="18" conditionals="8" coveredconditionals="0" methods="18" coveredmethods="9"/>
+      <file name="use-bank-account.ts" path="/home/thiagobutignon/dev/free-the-freela/src/presentation/hooks/use-bank-account.ts">
+        <metrics statements="35" coveredstatements="18" conditionals="8" coveredconditionals="0" methods="18" coveredmethods="9"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="16" type="stmt"/>
+        <line num="11" count="16" type="stmt"/>
+        <line num="12" count="16" type="stmt"/>
+        <line num="13" count="16" type="stmt"/>
+        <line num="14" count="16" type="stmt"/>
+        <line num="16" count="16" type="stmt"/>
+        <line num="17" count="6" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="28" count="16" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
         <line num="30" count="0" type="stmt"/>
-        <line num="31" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="32" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="34" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
+        <line num="35" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="36" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
         <line num="41" count="0" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
-        <line num="44" count="0" type="stmt"/>
-        <line num="45" count="0" type="stmt"/>
-        <line num="46" count="0" type="stmt"/>
-        <line num="47" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="45" count="17" type="stmt"/>
+        <line num="47" count="16" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
         <line num="49" count="0" type="stmt"/>
-        <line num="52" count="0" type="stmt"/>
-        <line num="53" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="56" count="0" type="stmt"/>
-        <line num="66" count="0" type="stmt"/>
-        <line num="94" count="0" type="stmt"/>
-        <line num="101" count="0" type="stmt"/>
-        <line num="102" count="0" type="stmt"/>
-        <line num="104" count="0" type="stmt"/>
-        <line num="105" count="0" type="stmt"/>
-        <line num="106" count="0" type="stmt"/>
-        <line num="108" count="0" type="stmt"/>
-        <line num="111" count="0" type="stmt"/>
-        <line num="112" count="0" type="stmt"/>
-        <line num="116" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="51" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="56" count="16" type="stmt"/>
+        <line num="57" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="60" count="16" type="stmt"/>
+        <line num="62" count="16" type="stmt"/>
       </file>
-      <file name="index.ts" path="/home/thiagobutignon/dev/free-the-freela/src/presentation/pages/index.ts">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+    </package>
+    <package name="src.presentation.pages">
+      <metrics statements="7" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="home.tsx" path="/home/thiagobutignon/dev/free-the-freela/src/presentation/pages/home.tsx">
+        <metrics statements="7" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
       </file>
     </package>
   </project>

@@ -62,5 +62,19 @@
     "lint-staged": "^15.0.2",
     "module-alias": "^2.2.3",
     "ts-jest": "^29.1.1"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx,js,jsx}",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/path/to/dir/",
+      "!<rootDir>/src/main/**/*.ts",
+      "!<rootDir>/src/presentation/pages/**/*.ts",
+      "!<rootDir>/src/*.ts",
+      "!<rootDir>/src/data/protocols/**",
+      "!<rootDir>/src/domain/models/**",
+      "!<rootDir>/src/reportWebVitals.js",
+      "!<rootDir>/src/setupTests.js"
+    ]
   }
 }

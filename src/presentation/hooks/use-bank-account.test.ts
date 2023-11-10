@@ -67,7 +67,7 @@ describe('useBankAccount', () => {
   });
 
   it('reacts to changes in getBankAccount dependency', async () => {
-    const newGetBankAccountSpy = new GetBankAccountSpy(/* new mock data */);
+    const newGetBankAccountSpy = new GetBankAccountSpy();
     const { result, rerender } = renderHook(({ getBankAccount }) => useBankAccount(getBankAccount), {
       initialProps: { getBankAccount: getBankAccountSpy }
     });

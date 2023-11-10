@@ -17,19 +17,6 @@ export const Home: React.FC<Props> = ({ getBankAccount }) => {
     error: ''
   })
   const [selectedAccountIndex, setSelectedAccountIndex] = useState<number | null>(null);
-
-  useEffect(() => {
-    setState(old => ({ ...old, isLoading: true }))
-    getBankAccount.perform()
-      .then(accounts => {
-        setState(old => ({ ...old, accounts, isLoading: false }));
-      })
-      .catch(error => {
-        console.log(error)
-        setState(old => ({ ...old, accounts: [], isLoading: false }))
-      })
-  }, [getBankAccount])
-
   const [showBarChart, setShowBarChart] = useState<boolean>(false)
   const [barChartData, setBarChartData] = useState<Array<{ x: string, y: number }>>([]);
   const [transactionDescriptions, setTransactionDescriptions] = useState<string[]>([]);
@@ -91,6 +78,18 @@ export const Home: React.FC<Props> = ({ getBankAccount }) => {
 
   const chartLabels = makeAccountTypes()
   const chartSeries = aggregateBalances()
+
+  useEffect(() => {
+    setState(old => ({ ...old, isLoading: true }))
+    getBankAccount.perform()
+      .then(accounts => {
+        setState(old => ({ ...old, accounts, isLoading: false }));
+      })
+      .catch(error => {
+        console.log(error)
+        setState(old => ({ ...old, accounts: [], isLoading: false }))
+      })
+  }, [getBankAccount])
 
   return (
     <>

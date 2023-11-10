@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1699644874593" clover="3.2.0">
-  <project timestamp="1699644874593" name="All files">
+<coverage generated="1699645296974" clover="3.2.0">
+  <project timestamp="1699645296974" name="All files">
     <metrics statements="88" coveredstatements="26" conditionals="26" coveredconditionals="11" methods="36" coveredmethods="12" elements="150" coveredelements="49" complexity="0" loc="88" ncloc="88" packages="11" files="23" classes="23"/>
     <package name="src">
       <metrics statements="11" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
@@ -73,7 +73,7 @@
         <line num="28" count="1" type="stmt"/>
         <line num="29" count="1" type="stmt"/>
         <line num="32" count="4" type="stmt"/>
-        <line num="36" count="19" type="stmt"/>
+        <line num="36" count="25" type="stmt"/>
         <line num="45" count="1" type="stmt"/>
       </file>
       <file name="index.ts" path="/home/thiagobutignon/dev/free-the-freela/src/domain/mocks/index.ts">
